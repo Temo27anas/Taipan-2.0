@@ -53,6 +53,7 @@ GPIO.setup(GPIO_ECHO_2, GPIO.IN)
 GPIO.output(GPIO_TRIG_2, GPIO.LOW)
 
 #setup Sensor 3
+
 GPIO_TRIG_3 = 26
 GPIO_ECHO_3 = 6
 GPIO.setup(GPIO_TRIG_3, GPIO.OUT)

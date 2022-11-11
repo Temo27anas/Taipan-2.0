@@ -1,13 +1,13 @@
 import keyboard, serial,time, pandas as pd
 import datetime
 
-vexser = serial.Serial('COM8', 9600)
+vexser = serial.Serial('COM8', 9600) ######################################################## 
 
 mapping_active = True
 i=0
 
 #data frame of mapping
-mapping = pd.DataFrame(columns=['time','h', 's1', 's2', 's3','s4','s5','s6'])
+mapping = pd.DataFrame(columns=['time','h'])
 
 #set time as index
 mapping.set_index('time', inplace=True)
@@ -26,7 +26,7 @@ while True:
         time.sleep(0.1)
 
     if keyboard.is_pressed('m'):
-        mapping_active = not mapping_active
+        
         #save mapping to csv
         mapping.to_csv('mapping.csv')
         print('mapping saved')
@@ -49,6 +49,4 @@ while True:
             
             #print(mapping)
     
-
-
 
