@@ -1,0 +1,26 @@
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import matplotlib.pyplot as plt
+
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# plot a 3D cube 
+
+# define the vertices of the cube
+v = [[0,0,0], [0,1,0], [1,1,0], [1,0,0], [0,0,1], [0,1,1], [1,1,1], [1,0,1]]
+
+# list of sides' polygons of figure
+f = [[1,2,3,4], [5,6,7,8], [1,2,6,5], [2,3,7,6], [3,4,8,7], [4,1,5,8]]
+
+
+# Plot faces
+ax.add_collection3d(Poly3DCollection([v[s] for s in f], facecolors='cyan', linewidths=1, edgecolors='r', alpha=.25))
+
+plt.show()
+
+
+
+
+

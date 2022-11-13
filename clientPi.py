@@ -2,7 +2,8 @@ import requests
 import time
 import pandas as pd
 import keyboard
-url = 'http://10.126.164.183:5000/'    #################################################
+
+url = 'http://10.126.164.183:5000/'    ################################################# TO CHANGE !
 
 #create a pandas dataframe
 sensorsdata = pd.DataFrame(columns=['time', 'S1', 'S2', 'S3','S4','S5','S6'])
@@ -31,7 +32,7 @@ while(1):
 
     #print(sensorsdata)
 
-    if keyboard.is_pressed('a'):
+    if keyboard.is_pressed('u'):
         #save mapping to csv
         sensorsdata.to_csv('sensorsdata.csv')
         print('mapping saved')
