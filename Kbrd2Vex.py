@@ -30,6 +30,7 @@ while True:
         #save mapping to csv
         mapping.to_csv('mapping.csv')
         print('mapping saved')
+
     
 
         
