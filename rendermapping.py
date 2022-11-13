@@ -21,7 +21,7 @@ merged = merged.drop('time', 1)
 #create a new dataframe with the data from the merged dataframe
 final= pd.DataFrame(columns=['h', 'Sx1', 'Sy1', 'Sx2', 'Sy2', 'Sx3', 'Sy3', 'Sx4', 'Sy4', 'Sx5', 'Sy5', 'Sx6', 'Sy6'])
 
-final['h'] = merged['h']
+final['h'] = -1*merged['h']
 final['Sx1'] = (6+merged['S1'])*np.cos(0)
 final['Sy1'] = (6+merged['S1'])*np.sin(0)
 final['Sx2'] = (6+merged['S2'])*np.cos(60 * np.pi / 180)
